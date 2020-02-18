@@ -21,7 +21,7 @@ main {
     flex-grow: 1;
 }
 
-input {
+input, button {
     /* Stops chrome from highlighting the selected input */
     outline: none;
 }
