@@ -1,0 +1,33 @@
+#search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3.5rem;
+}
+
+.children {
+    font-size: 1.25rem;
+    text-align: center;
+    border: none;
+}
+
+input {
+    margin-bottom: 2.5rem;
+    padding: 1rem;
+    width: 20rem;
+    border-radius: 0.75rem;
+    /* Stops chrome from highlighting the selected input */
+    outline: none;
+}
+
+button {
+    padding: 0.75rem 2.75rem;
+    border-radius: 2rem;
+    background-color: rgb(2, 12, 57);
+    color: white;
+    transition-duration: 250ms;
+}
+
+button:hover {
+    background-color: rgba(123, 38, 202, 0.75);
+}
