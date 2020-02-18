@@ -1,0 +1,11 @@
+#results-and-playlist {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.column {
+    min-width: 400px;
+}

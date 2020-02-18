@@ -4,8 +4,8 @@ import './Search.css';
 function Search() {
     return (
         <div id="search">
-            <input type="text" placeholder="Enter a song, album, or artist" class="children"/>
-            <button id="submit" class="children">SEARCH</button>
+            <input type="text" placeholder="Enter a song, album, or artist" className="children"/>
+            <button id="submit" className="children">SEARCH</button>
         </div>
     );
 }

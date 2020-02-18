@@ -1,18 +1,17 @@
-#column {
+.column {
     background-color: rgba(6, 6, 77, 0.7);
     padding: 1rem;
     margin: 2rem;
     border-radius: 0.25rem;
-    box-shadow: 0 0.2rem 5px black;
+    box-shadow: 0 7px 5px black;
 }
 
-#title {
+.column .title {
     font-size: 1.75rem;
     font-weight: bold;
     color: white;
 }
 
-#children {
-    margin-top: 1rem;
+.column .children {
     color: white;
 }

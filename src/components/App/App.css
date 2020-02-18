@@ -1,12 +1,27 @@
 .App {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Work Sans";
+}
+
+h1 {
+    font-family: "Poppins";
+}
+h2 {
+    font-family: "Poppins";
 }
 
 main {
-  background-image: url("./background_photo_desktop.jpg");
-  background-position: center;
-  background-size: 100% auto;
-  flex-grow: 1;
+    background-image: url("./background_photo_desktop.jpg");
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    flex-grow: 1;
+}
+
+input {
+    /* Stops chrome from highlighting the selected input */
+    outline: none;
 }
