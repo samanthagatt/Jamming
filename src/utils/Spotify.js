@@ -46,7 +46,8 @@ const Spotify = {
                 return {
                     title: song.name,
                     artist: song.artists[0].name,
-                    album: song.album.name
+                    album: song.album.name,
+                    key: song.id
                 }
             })
         } catch (error) {

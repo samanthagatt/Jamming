@@ -10,11 +10,13 @@ function App(props) {
             <Header />
             <main>
                 <SearchContainer searchTerm={props.searchTerm}
-                                onSearchTermChange={props.onSearchTermChange} />
+                                onSearchTermChange={props.onSearchTermChange}
+                                onSearch={props.onSearch} />
                 <ResultsAndPlaylist searchResults={props.searchResults}
                                     playlistTitle={props.playlistTitle}
                                     addedSongs={props.addedSongs}
-                                    onPlaylistTitleChange={props.onPlaylistTitleChange} />
+                                    onPlaylistTitleChange={props.onPlaylistTitleChange}
+                                    onPlaylistSongsChange={props.onPlaylistSongsChange} />
             </main>
         </div>
     );

@@ -9,7 +9,7 @@ class SearchContainer extends React.Component {
     handleSearch() {
         const textField = document.getElementById('search-term-input');
         Spotify.search(textField.value).then(searchResults => {
-            console.log(searchResults);
+            this.props.onSearch(searchResults);
         });
     }
     handleInputOnClick() {
