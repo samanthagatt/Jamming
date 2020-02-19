@@ -16,7 +16,7 @@ function Playlist(props) {
                     })}
                 </ul>
             }
-            <button id="save-to-spotify" style={ !hasSongs ? {marginTop: "1.5rem"} : {} }>SAVE TO SPOTIFY</button>
+            <button id="save-to-spotify" onClick={props.onAddPlaylist}>SAVE TO SPOTIFY</button>
          </Column>
     );
 }

@@ -14,18 +14,24 @@ class AppContainer extends React.Component {
     updateState(key, value) {
         const newState = {};
         newState[key] = value;
+        if (value === undefined) {
+            newState[key] = [];
+        }
         this.setState(newState);
     }
     updateAddedSongs(isAdded, newSong) {
         let addedSongs = this.state.addedSongs;
         if (!isAdded) {
             addedSongs.some(song => song.id === newSong.id) ||
-            addedSongs.push(newSong)
+            addedSongs.push(newSong);
          } else {
-            console.log('removing');
             addedSongs = addedSongs.filter(song => song.id !== newSong.id);
          }
-        this.setState({addedSongs: addedSongs})
+        this.updateState('addedSongs', addedSongs);
+    }
+    clearPlaylist() {
+        this.updateState('playlistTitle', '');
+        this.updateState('addedSongs', []);
     }
     render() {
         return <App searchTerm={this.state.searchTerm} 
@@ -35,7 +41,8 @@ class AppContainer extends React.Component {
                     onSearchTermChange={this.updateState.bind(this, "searchTerm")}
                     onPlaylistTitleChange={this.updateState.bind(this, "playlistTitle")}
                     onSearch={this.updateState.bind(this, "searchResults")}
-                    onPlaylistSongsChange={this.updateAddedSongs.bind(this)} />;
+                    onPlaylistSongsChange={this.updateAddedSongs.bind(this)}
+                    onSuccessfulCreation={this.clearPlaylist.bind(this)} />;
     }
  }
     

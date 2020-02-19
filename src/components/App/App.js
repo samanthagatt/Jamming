@@ -16,7 +16,8 @@ function App(props) {
                                     playlistTitle={props.playlistTitle}
                                     addedSongs={props.addedSongs}
                                     onPlaylistTitleChange={props.onPlaylistTitleChange}
-                                    onPlaylistSongsChange={props.onPlaylistSongsChange} />
+                                    onPlaylistSongsChange={props.onPlaylistSongsChange}
+                                    onSuccessfulCreation={props.onSuccessfulCreation} />
             </main>
         </div>
     );
