@@ -5,10 +5,10 @@ import Song from '../Song/Song';
 import PropTypes from 'prop-types';
 
 function Playlist(props) {
-    const hasSongs = props.addedSongs !== undefined;
+    const hasSongs = props.addedSongs.length !== 0;
     return (
         <Column id="playlist-column">
-            <input type="text" placeholder="New Playlist" id="playlist-name" />
+            <input type="text" id="playlist-name" placeholder="New Playlist" value={props.playlistTitle} onChange={props.onPlaylistTitleChange} />
             { hasSongs &&
                 <ul id="playlist">
                     { props.addedSongs.map(song => <li key={song}><Song song={song} isAdded={true} /></li>) }
@@ -20,7 +20,7 @@ function Playlist(props) {
 }
 
 Playlist.propTypes = {
-    addedSongs: PropTypes.array
+    addedSongs: PropTypes.array.isRequired
 }
 
 export default Playlist;

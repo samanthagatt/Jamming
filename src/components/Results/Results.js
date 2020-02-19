@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 function Results(props) {
     return (
         <Column title="Results">
-            { props.results !== undefined &&
+            { props.results.length !== 0 &&
                 <ul>
                     { props.results.map(result => <li key={result.key}><Song song={result} isAdded={false} /></li>) }
                 </ul>
@@ -16,7 +16,7 @@ function Results(props) {
 }
 
 Results.propTypes = {
-    results: PropTypes.array
+    results: PropTypes.array.isRequired
 }
 
 export default Results;
