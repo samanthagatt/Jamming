@@ -9,9 +9,8 @@ function App(props) {
         <div id="App">
             <Header />
             <main>
-                <SearchContainer isLoggedIn={props.isLoggedIn}
-                        searchTerm={props.searchTerm}
-                        onSearchTermChange={props.onSearchTermChange} />
+                <SearchContainer searchTerm={props.searchTerm}
+                                onSearchTermChange={props.onSearchTermChange} />
                 <ResultsAndPlaylist searchResults={props.searchResults}
                                     playlistTitle={props.playlistTitle}
                                     addedSongs={props.addedSongs}

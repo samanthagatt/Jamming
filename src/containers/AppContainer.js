@@ -5,7 +5,6 @@ class AppContainer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isLoggedIn: false,
             searchTerm: '',
             searchResults: [],
             playlistTitle: '',
@@ -24,8 +23,7 @@ class AppContainer extends React.Component {
     }
 
     render() {
-        return <App isLoggedIn={this.state.isLoggedIn}
-                    searchTerm={this.state.searchTerm} 
+        return <App searchTerm={this.state.searchTerm} 
                     searchResults={this.state.searchResults} 
                     playlistTitle={this.state.playlistTitle}
                     addedSongs={this.state.addedSongs}
