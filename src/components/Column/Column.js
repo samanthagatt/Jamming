@@ -6,7 +6,7 @@ function Column(props) {
     const hasTitle = props.title !== undefined;
     const hasChildren = props.children !== false;
     return (
-        <div className="column">
+        <div className="column" id={props.id}>
             { hasTitle && <h2 className="title">{props.title}</h2> }
             {  hasChildren &&
                 <div className="children" style={ hasTitle ? { marginTop: "1rem" } : {} } >

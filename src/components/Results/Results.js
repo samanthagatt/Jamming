@@ -8,7 +8,7 @@ function Results(props) {
         <Column title="Results">
             { props.results !== undefined &&
                 <ul>
-                    { props.results.map(result => <li key={result.key}><Song song={result} /></li>) }
+                    { props.results.map(result => <li key={result.key}><Song song={result} isAdded={false} /></li>) }
                 </ul>
             }
          </Column>

@@ -1,3 +1,6 @@
+#playlist-column {
+    text-align: center;
+}
 
 #playlist-name {
     font-size: 1.75rem;
@@ -10,4 +13,22 @@
     padding-top: 0;
     padding-bottom: 0.4rem;
     width: 100%;
+}
+
+#playlist {
+    margin-top: 1rem;
+    text-align: left;
+}
+
+#save-to-spotify {
+    padding: 0.75rem 1.5rem;
+    border-radius: 1.5rem;
+    margin: 0.5rem auto;
+    background-color: rgb(101, 73, 227);
+    color: white;
+    transition-duration: 150ms;
+}
+
+#save-to-spotify:hover {
+    background-color: rgba(101, 73, 227, 0.7);
 }
