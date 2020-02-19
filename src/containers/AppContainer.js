@@ -10,32 +10,32 @@ class AppContainer extends React.Component {
             playlistTitle: '',
             addedSongs: []
         }
-        this.updateSearchTerm = this.updateSearchTerm.bind(this);
-        this.updatePlaylistTitle = this.updatePlaylistTitle.bind(this);
-        this.updateSearchResults = this.updateSearchResults.bind(this);
-        this.updatePlaylistSongs = this.updatePlaylistSongs.bind(this);
     }
-    updateSearchTerm(term) {
-        this.setState({searchTerm: term});
+    updateState(key, value) {
+        const newState = {};
+        newState[key] = value;
+        this.setState(newState);
     }
-    updatePlaylistTitle(title) {
-        this.setState({playlistTitle: title})
-    }
-    updateSearchResults(songs) {
-        this.setState({searchResults: songs});
-    }
-    updatePlaylistSongs(songs) {
-        this.setState({addedSongs: songs});
+    updateAddedSongs(isAdded, newSong) {
+        let addedSongs = this.state.addedSongs;
+        if (!isAdded) {
+            addedSongs.some(song => song.id === newSong.id) ||
+            addedSongs.push(newSong)
+         } else {
+            console.log('removing');
+            addedSongs = addedSongs.filter(song => song.id !== newSong.id);
+         }
+        this.setState({addedSongs: addedSongs})
     }
     render() {
         return <App searchTerm={this.state.searchTerm} 
                     searchResults={this.state.searchResults} 
                     playlistTitle={this.state.playlistTitle}
                     addedSongs={this.state.addedSongs}
-                    onSearchTermChange={this.updateSearchTerm}
-                    onPlaylistTitleChange={this.updatePlaylistTitle}
-                    onSearch={this.updateSearchResults}
-                    onPlaylistSongsChange={this.updatePlaylistSongs} />;
+                    onSearchTermChange={this.updateState.bind(this, "searchTerm")}
+                    onPlaylistTitleChange={this.updateState.bind(this, "playlistTitle")}
+                    onSearch={this.updateState.bind(this, "searchResults")}
+                    onPlaylistSongsChange={this.updateAddedSongs.bind(this)} />;
     }
  }
     

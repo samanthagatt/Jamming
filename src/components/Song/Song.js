@@ -9,7 +9,7 @@ function Song(props) {
                 <p className="song-title">{song.title}</p>
                 <p className="artist-and-album">{song.artist} | {song.album}</p>
             </div>
-            <button>{ props.isAdded ? '-' : '+' }</button>
+            <button onClick={props.onPlaylistSongsChange}>{ props.isAdded ? '-' : '+' }</button>
         </div>
     );
 }
