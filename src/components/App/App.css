@@ -21,6 +21,12 @@ main {
     flex-grow: 1;
 }
 
+#note {
+    margin: 2rem 3rem 0;
+    text-align: center;
+    color: white;
+}
+
 input, button {
     /* Stops chrome from highlighting the selected input */
     outline: none;

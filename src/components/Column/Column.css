@@ -1,7 +1,7 @@
 .column {
     background-color: rgba(2, 13, 60, 0.7);
     padding: 1rem;
-    margin: 2rem;
+    margin: 0 2rem 3rem;
     border-radius: 0.25rem;
     box-shadow: 0 7px 5px black;
 }

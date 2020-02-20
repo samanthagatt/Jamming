@@ -12,6 +12,7 @@ function App(props) {
                 <SearchContainer searchTerm={props.searchTerm}
                                 onSearchTermChange={props.onSearchTermChange}
                                 onSearch={props.onSearch} />
+                <p id="note">* Unfortunately you can't grant this app access through Spotify on Safari, but if you're already logged in and allow access on another browser it will work :)</p>
                 <ResultsAndPlaylist searchResults={props.searchResults}
                                     playlistTitle={props.playlistTitle}
                                     addedSongs={props.addedSongs}

@@ -13,7 +13,7 @@ const Spotify = {
 
         const windowUrl = window.location.href;
         if (!windowUrl.includes('access_token=')) {
-            const callbackUri = 'http://localhost:3000/';
+            const callbackUri = 'http://jammmingbysam.surge.sh';
             const scope = 'playlist-modify-public';
             const state = 'thisisthestateeee'
             const url = `${SPOTIFY_ACCOUNT_URL}?client_id=${clientId}&redirect_uri=${callbackUri}&scope=${scope}&response_type=token&state=${state}`;
